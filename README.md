@@ -1,7 +1,7 @@
 # SNA
 Jupyter notebooks related to Social Network Analysis based on twitter data or flow networks. An Algorithm design for measuring embeddedness in weighted flow networks is introduced.
 
-# Embeddedness ALGORITHM (JongP_X)
+# Embeddedness ALGORITHM (JongP_louvain)
 We will start with some observations about communities and how they influence the embeddedness score. Then we describe out actual used algorithm called CalcEmbeddedness. Next we discuss the algorithm’s complexity and some optimization suggestions.
 ## Observations
 In the context of network, communities refer to the occurrence of nodes that are more densely connected. If we calculate the embeddedness score (e) for some node v in a community, we know that the outcome lies between zero and one, and the distribution of scores will be right skewed to- wards one. This is certainly because there should only be a few nodes in a (strong) community that are connected to nodes outside the community. We can therefore assume that if a node has no links from outside the community, the embeddedness score equals one. In addition, we work in di- rected networks with the algorithm. The degree of nodes in the directed network can be divided between in and out degree, and if a node v does not have an out-degree then the embeddedness score will also be zero.
